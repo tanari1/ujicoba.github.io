@@ -1,0 +1,246 @@
+:root{
+    --pri:rgb(190, 126, 7);
+    --bg:rgb(182, 156, 107);
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+}
+h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+p {
+    font-size: x-large;
+    text-align: center;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(212, 170, 92);
+    border-bottom: 1px solid var(--pri);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.nav .logo {
+    float: left;
+    width: 7%;
+    height: 5%;
+}
+.nav .nav-nav a {
+    color: #fff;
+    font-size: 1.4rem;
+    display: inline-block;
+    margin: 0 1rem;
+}
+.nav .nav-nav a:hover {
+    color: var(--pri);
+}
+.nav .nav-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--pri);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+.nav .nav-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.nav .nav-extra a{
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.nav .nav-extra a:hover{
+    color: var(--pri);
+}
+
+#hamburger-menu{
+    display: none;
+}
+
+/*beranda section*/
+
+.beranda{
+    min-height: 130vh;
+    display:flex;
+    align-items: center;
+    background-image: url(roti4.jpeg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.beranda::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgb(182, 156, 107)3%, rgba(255,255,255,0)10%);
+}
+.beranda .content h1{
+    font-size: 3em;
+    color: #fff;
+
+}
+/*media queries*/
+/* laptop*/
+@media(max-width:1366px) {
+    html{
+        font-size: 75%;
+    }
+}
+/* tablet*/
+@media(max-width:758px) {
+    html{
+        font-size: 62.5%;
+    }
+    #hamburger-menu{
+        display:inline-block ;
+    }
+    .nav .nav-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+    .nav .nav-nav.active{
+        right: 0;
+    }
+    .nav .nav-nav a{
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+    .nav .nav-nav a::after{
+        transform-origin: 0 0;
+    }
+    .nav .nav-nav a:hover::after{
+        transform: scaleX(0.2);
+    }
+}
+
+/* mobile phone*/
+@media(max-width:400px) {
+    html{
+        font-size: 55%;
+    }
+}
+
+/* MENU*/
+
+h1{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+    margin-top: 10rem;
+}
+.menu{
+    display: inline-block;
+}
+.menu .menu1{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+.gambar-menu{
+    width: 400px;
+    height: 400px;
+}
+.menu .menu1 .teks-menu{
+    max-width: 400px;
+    text-align: center;
+}
+.menu .menu1 .isimenu{
+    margin: 1rem auto 0.5rem;
+}
+
+.testi {
+    padding-left: 30px;
+    padding-right: 30px;
+    display: inline-block;
+}
+.lokasi {
+    padding:20px;
+    display: inline;
+}
+.lokasi .lokasi1{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+.lokasi .lokasi1 .teks-lokasi{
+    max-width: 400px;
+    text-align: center;
+}
+.g-lok{
+    width: 400px;
+    height: 500px;
+}
+.lokasi .lokasi1 .gambar-lokasi{
+    margin: 1rem auto 0.5rem;
+}
+iframe {
+    padding-left: 20px;
+    width:400px ;
+    height:450px; 
+    display: inline;
+    float: right;
+}
+.footer{
+
+    text-align: center;
+    background-color: rgb(212, 170, 92);
+    padding: 1rem 0rem;
+    margin-top: 3rem;
+}
+.footer .socials {
+    padding: 2rem;
+    margin: 1rem 0;
+}
+/*==================================*/
+
+.menu-kiri {
+    float: left;
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+    padding-left: 5px;
+    
+}
+
+.fkiri {
+    padding-left: 100px;
+    padding-right: 100px;
+    float: left;
+}
